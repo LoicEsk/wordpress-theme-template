@@ -1,12 +1,6 @@
-# Docker dev env
+# WordPress Theme Template
 
-Template de dépôt pour stack php / ReactJs
-
-C'est version est pensée pour Symfony
-
-## Les configrations disponibles
-
-D'autres configurations sont disponible sur les différentes branches
+Template pour la création de thèmes WordPress
 
 
 ## Utilisation du serveur Docker
@@ -14,4 +8,6 @@ D'autres configurations sont disponible sur les différentes branches
 Installation et déployement pour developement en local
 
 1. `bash deploy_docker.sh
+
+URL locale : http://localhost:8000
 

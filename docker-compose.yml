@@ -1,38 +1,32 @@
 version: '3'
 services:
-    sf:
-        build: .docker/sf
-        volumes:
-            - ./:/var/www/app
+    wp:
+        build: .docker/wp
         ports:
             - "8000:80"
+        environment:
+            - WORDPRESS_DB_HOST=db
+            - WORDPRESS_DB_USER=root
+            - WORDPRESS_DB_PASSWORD=
+            - WORDPRESS_DB_NAME=wordpress
+            - WORDPRESS_TABLE_PREFIX=wp_
+            - WORDPRESS_DEBUG=1
         depends_on:
             - db
+        volumes:
+            - ./:/var/www/html/wp-content/themes/wordpress-theme-template
+            - .docker/volumes/mu-plugins/mailhog.php:/var/www/html/wp-content/mu-plugins/mailhog.php
         user: www-data
-        dns:
-            - 8.8.8.8
-            - 208.67.222.222
-            - 1.1.1.1
     db:
-        image: mysql
+        image: mysql:5
         ports:
             - "3307:3306"
         environment:
             MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
-            MYSQL_DATABASE: 'sf'
+            MYSQL_DATABASE: 'wordpress'
+    
     mailhog:
-        image: mailhog/mailhog:v1.0.0
+        image: mailhog/mailhog
         ports:
             - "1025:1025"
             - "8025:8025"
-    encore:
-        build: .docker/node
-        volumes:
-            - ./:/usr/src/app
-        ports:
-            - "8080:8080"
-        depends_on:
-            - sf
-        environment: 
-            - LOCAL_DOMAIN=sf/
-        command: sh -c "npm install && npm run dev-server"
