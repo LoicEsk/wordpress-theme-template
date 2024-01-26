@@ -1,0 +1,78 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"settings": {
+        "appearanceTools": true,
+		"border": {
+            "color": false
+        },
+		"color": {
+            "custom": false,
+            "defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+            "duotone": [],
+			"gradients": [],
+			"palette": [
+                {
+                    "color": "#ffffff",
+                    "name": "Base",
+                    "slug": "base"
+                },
+                {
+                    "color": "#89CFF0",
+                    "name": "Primary",
+                    "slug": "primary"
+                },
+                {
+                    "color": "#ffffff",
+                    "name": "Secondary",
+                    "slug": "secondary"
+                }
+            ]
+        },
+		"custom": {},
+		"dimensions": {
+			"minHeight": true
+		},
+		"layout": {
+			"contentSize": "900px",
+			"wideSize": "90%"
+		},
+		"position": {},
+		"shadow": {},
+		"spacing": {
+			"blockGap": true,
+			"customSpacingSize": true,
+			"margin": true,
+			"padding": true,
+			"spacingScale": {
+				"operator": "*",
+				"increment": 1.5,
+				"steps": 7,
+				"mediumStep": 1.5,
+				"unit": "rem"
+			},
+			"spacingSizes": [],
+			"units": [ "px", "em", "rem", "vh", "vw", "%" ]
+		},
+		"typography": {
+			"customFontSize": true,
+			"dropCap": true,
+			"fontStyle": true,
+			"fontWeight": true,
+			"letterSpacing": true,
+			"lineHeight": false,
+			"textColumns": false,
+			"textDecoration": true,
+			"textTransform": true,
+			"writingMode": false
+		},
+		"useRootPaddingAwareAlignments": false,
+		"blocks": {}
+    },
+	"styles": {},
+	"customTemplates": {},
+	"templateParts": {},
+	"patterns": []
+}

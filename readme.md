@@ -19,3 +19,5 @@ URL locale : http://localhost:8000
 [Template Hierarchy](https://developer.wordpress.org/themes/templates/template-hierarchy/)
 
 [Theme support](https://developer.wordpress.org/reference/functions/add_theme_support/)
+
+[Global Settings and Styles (theme.json)](https://developer.wordpress.org/themes/global-settings-and-styles/)
