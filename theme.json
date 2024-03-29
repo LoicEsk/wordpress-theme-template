@@ -71,7 +71,25 @@
 		"useRootPaddingAwareAlignments": false,
 		"blocks": {}
     },
-	"styles": {},
+	"styles": {
+		"color": {
+			"text": "#333333",
+			"background": "#f5f1ea"
+		},
+		"elements": {
+			"button": {
+				"color": {
+					"text": "#ffffff",
+					"background": "#aa3f33"
+				},
+				":hover": {
+					"color": {
+						"background": "#822f27"
+					}
+				}
+			}
+		}
+	},
 	"customTemplates": {},
 	"templateParts": {},
 	"patterns": []
