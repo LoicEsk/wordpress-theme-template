@@ -1,4 +1,3 @@
-version: '3'
 services:
     wp:
         build: .docker/wp
@@ -24,6 +23,16 @@ services:
         environment:
             MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
             MYSQL_DATABASE: 'wordpress'
+
+    webpack:
+        image: node:24
+        volumes:
+            - ./:/usr/src/app
+        ports:
+            - "8080:8080"
+        user: node
+        working_dir: /usr/src/app
+        command: sh -c "npm ci && npm run dev-server"
     
     mailhog:
         image: mailhog/mailhog

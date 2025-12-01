@@ -1,0 +1,19 @@
+{
+  "name": "wordpress-theme-template",
+  "version": "1.0.0",
+  "description": "Task runner pour le thème WordPress",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-server": "encore dev-server --public http://localhost:8080 --host 0.0.0.0 --hot",
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "build": "encore production --progress"
+  },
+  "author": "LoicEsk",
+  "license": "ISC",
+  "dependencies": {
+    "@symfony/webpack-encore": "^5.3.1",
+    "webpack-dev-server": "^5.2.2",
+    "webpack-notifier": "^1.15.0"
+  }
+}
