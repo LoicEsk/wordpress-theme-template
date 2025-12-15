@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: List of posts, 3 columns
- * Slug: themeslug/post-list
+ * Slug: post-list
  * Categories: query
  * Block Types: core/query
  */
